@@ -1,0 +1,11 @@
+{
+    "go.toolsEnvVars": {
+        "GOOS": "linux",
+        "GOARCH": "arm",
+        "GOROOT": "/root/.cache/tinygo/goroot",
+        "GOFLAGS": "-tags=cortexm,baremetal,linux,arm,bluepill,stm32f103,stm32f1,stm32,tinygo,math_big_pure_go,gc.conservative,scheduler.tasks,serial.uart"
+    },
+    "cSpell.words": [
+        "uart"
+    ],
+}
