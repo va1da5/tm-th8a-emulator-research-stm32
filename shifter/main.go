@@ -12,22 +12,6 @@ var gear = gears.GEAR
 const address = uint16(0x01)
 
 var empty = []byte{}
-var data = []byte{
-	0x80, // Shifter mode 0 - S / 0x80 - H
-	0x0C, // Unknown
-	0x01, // Unknown
-	0x00, // Gear in H-mode
-	0x05, // Gear in S-Mode 0x04 - center, 0x05 - down, 0x06 - up
-	0x80, // Unknown
-	0x80, // Unknown
-	0x00, // Y coordinate
-	0x00, // X coordinate
-	0x00, // Unknown
-	0x00, // Unknown
-	0x00, // Unknown
-	0x00, // Unknown
-	0x00, // Unknown
-}
 
 func formatAddress(value uint16) string {
 	return "0x" + strconv.FormatInt(int64(value), 16)
@@ -42,7 +26,7 @@ func send(i2c *machine.I2C, data []byte) {
 	}
 }
 
-func loopGears(i2c *machine.I2C, data []byte) {
+func loopGears(i2c *machine.I2C) {
 
 	for {
 		// Sequential mode
