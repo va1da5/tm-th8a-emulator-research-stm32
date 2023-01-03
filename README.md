@@ -18,7 +18,7 @@ TSS Sparco handbrake I2C data
 
 > Above TSS handbrake's I2C data mean about 0-100% brake force. Of course you need to send out every row maybe 100 times. Because of 250ms. Elsewhere you won't see anything.
 
-```js
+```
 0  02 02 02 02 02 // TSS handbrake
 1  0C 0C 0C 0C 0C // Unknown
 2  02 02 02 02 02 // ?? Device ID
